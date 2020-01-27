@@ -41,6 +41,11 @@ public class HundirFlota {
         int inicial = 1;
         this.array[fila][columna] = inicial;
     }
+    
+    public void addBarcoIa(int fila, int columna) {
+        int inicial = 2;
+        this.array[fila][columna] = inicial;
+    }
 
     public void deleteBarco(int fila, int columna) {
         if (this.array[fila][columna] != 0) {
@@ -56,6 +61,16 @@ public class HundirFlota {
             System.out.println("Barco alcanzado en [" + fila + "," + columna + "]");
         } else {
             this.array[fila][columna] = 9;
+            System.out.println("No hay un barco en [" + fila + "," + columna + "]");
+        }
+    }
+    
+    public void disparoTuyo(int fila, int columna) {
+        if (this.array[fila][columna] == 1) {
+            this.array[fila][columna] = 8;
+            System.out.println("Barco alcanzado en [" + fila + "," + columna + "]");
+        } else {
+            this.array[fila][columna] = 8;
             System.out.println("No hay un barco en [" + fila + "," + columna + "]");
         }
     }
